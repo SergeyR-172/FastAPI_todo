@@ -2,7 +2,6 @@ from sqlalchemy.orm import Session
 from models import ToDo
 from typing import List, Optional
 
-
 def create_todo(db: Session, title: str, description: Optional[str] = None) -> ToDo:
     todo = ToDo(title=title, description=description, completed=False)
     db.add(todo)
